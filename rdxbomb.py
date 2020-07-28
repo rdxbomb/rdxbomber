@@ -194,7 +194,9 @@ def justdial(num):
         browser.find_element_by_xpath('//*[@id="h_login"]').click()
         time.sleep(3)
         browser.find_element_by_xpath('//*[@id="lgn_name"]').send_keys("ghgdjfdff")
+        time.sleep(2)
         browser.find_element_by_xpath('//*[@id="lgn_mob"]').send_keys(num)
+        time.sleep(2)
         browser.find_element_by_xpath('//*[@id="lgn_smtn"]').click()
         time.sleep(2)
 
@@ -214,7 +216,7 @@ def housejoy(num):
         browser.find_element_by_xpath('//*[@id="top-head-height"]/div/nav/div[1]/div/div[3]/ul/li[3]/div').click()
         time.sleep(3)
         browser.find_element_by_xpath('//*[@id="loginModal"]/div/div/div[2]/div/div[1]/div/div/input').send_keys(num)
-
+        time.sleep(3)
         browser.find_element_by_xpath('//*[@id="loginModal"]/div/div/div[2]/div/div[2]/div[1]/div').click()
         time.sleep(2)
 
@@ -241,11 +243,11 @@ def filpkart(num):
 def yatra(num):
     try:
         browser.get('https://secure.yatra.com/social/common/yatra/register')
-        time.sleep(2)
+        time.sleep(4)
 
 
         browser.find_element_by_xpath('//*[@id="login-input"]').send_keys(num)
-        time.sleep(2)
+        time.sleep(3)
 
         browser.find_element_by_xpath('//*[@id="login-continue-btn"]').click()
         print("yatra send")
@@ -324,14 +326,14 @@ def goindigo(num):
 def myntra(num):
     try:
         browser.get('https://www.myntra.com/login')
-        time.sleep(2)
+        time.sleep(3)
 
 
         browser.find_element_by_xpath('//*[@id="reactPageContent"]/div/div/div[2]/div[2]/div[1]/input').send_keys(num)
-        time.sleep(2)
+        time.sleep(3)
 
         browser.find_element_by_xpath('//*[@id="reactPageContent"]/div/div/div[2]/div[2]/div[2]').click()
-
+        time.sleep(2)
 
         print(" myntra send ")
 
