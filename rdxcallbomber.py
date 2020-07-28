@@ -66,10 +66,36 @@ def call_olx(num):
         print("olx failed")
 
 
+def call_abhibus(num):
+    try:
+        browser.get('https://www.abhibus.com/')
+        time.sleep(2)
+
+        browser.find_element_by_xpath('//*[@id="AccLogin"]').click()
+        time.sleep(3)
+
+
+        browser.find_element_by_xpath('//*[@id="mobileNo"]').send_keys(num)
+        time.sleep(2)
+
+        browser.find_element_by_xpath('//*[@id="getotp"]').click()
+
+        time.sleep(30)
+
+        browser.find_element_by_xpath('//*[@id="btngetoncall1"]').click()
+        print(" abhibus send ")
+
+        time.sleep(2)
+
+
+
+    except:
+        print("abhibus failed")
+
 # -------------------------------------------------END FUNCTIONS ----------------------------------------------
 
 
-funclist = [call_olx]
+funclist = [call_olx,call_abhibus]
 
 
 for i in range(int(fq)+1):

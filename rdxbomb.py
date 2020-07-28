@@ -238,6 +238,109 @@ def filpkart(num):
 
 
 
+def yatra(num):
+    try:
+        browser.get('https://secure.yatra.com/social/common/yatra/register')
+        time.sleep(2)
+
+
+        browser.find_element_by_xpath('//*[@id="login-input"]').send_keys(num)
+        time.sleep(2)
+
+        browser.find_element_by_xpath('//*[@id="login-continue-btn"]').click()
+        print("yatra send")
+
+
+
+    except:
+        print("yatra failed")
+
+
+
+def gradeup(num):
+    try:
+        browser.get('https://gradeup.co/')
+        time.sleep(2)
+
+
+        browser.find_element_by_xpath('//*[@id="__next"]/div[2]/section[1]/div/div[2]/div/div/form/label/input').send_keys(num)
+        time.sleep(2)
+
+        browser.find_element_by_xpath('//*[@id="__next"]/div[2]/section[1]/div/div[2]/div/div/form/button').click()
+
+
+        print(" gradeup send ")
+
+
+
+    except:
+        print("gradeup failed")
+
+def vedantu(num):
+    try:
+        browser.get('https://www.vedantu.com/')
+        time.sleep(2)
+
+        browser.find_element_by_xpath('//*[@id="login-link"]').click()
+        time.sleep(2)
+
+
+
+        browser.find_element_by_xpath('//*[@id="login-email-phone"]/input').send_keys(num)
+        time.sleep(2)
+
+        browser.find_element_by_xpath('//*[@id="login-submit3"]').click()
+
+
+        print(" vedantu send ")
+
+
+
+    except:
+        print("vedantu failed")
+
+
+def goindigo(num):
+    try:
+        browser.get('https://www.goindigo.in/member/registration.html')
+        time.sleep(2)
+
+
+
+        browser.find_element_by_xpath('/html/body/div[4]/div[1]/div/section/div[1]/div/div/form/div/div[1]/div[2]/div/input').send_keys(num)
+        time.sleep(2)
+
+        browser.find_element_by_xpath('/html/body/div[4]/div[1]/div/section/div[1]/div/div/form/div/button').click()
+
+
+        print(" goindigo send ")
+
+
+
+    except:
+        print("goindigo failed")
+
+
+def myntra(num):
+    try:
+        browser.get('https://www.myntra.com/login')
+        time.sleep(2)
+
+
+        browser.find_element_by_xpath('//*[@id="reactPageContent"]/div/div/div[2]/div[2]/div[1]/input').send_keys(num)
+        time.sleep(2)
+
+        browser.find_element_by_xpath('//*[@id="reactPageContent"]/div/div/div[2]/div[2]/div[2]').click()
+
+
+        print(" myntra send ")
+
+
+
+    except:
+        print("myntra failed")
+
+
 
 #-----------------------------------------------  NOT WORKING ------------------------------------------------------------
 
@@ -374,7 +477,7 @@ def filpkart(num):
 # -----------------------------------------------------------------------------------------------------------------------------------------------
 
 # funclist = [swigy,myupchar,pizzahut,dominos,unacademy,medlife,lybrate,netmeds]
-funclist = [swigy,myupchar,pizzahut,dominos,unacademy,medlife,lybrate,netmeds,housing,dunzo,justdial,housejoy,filpkart]
+funclist = [swigy,myupchar,pizzahut,dominos,unacademy,medlife,lybrate,netmeds,housing,dunzo,justdial,housejoy,filpkart,yatra,gradeup,myntra,vedantu,goindigo]
 
 
 
