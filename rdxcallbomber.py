@@ -92,6 +92,59 @@ def call_abhibus(num):
     except:
         print("abhibus failed")
 
+def myupchar(num):
+    try:
+        browser.get('https://www.myupchar.com/users/sign_up')
+        time.sleep(4)
+        number = browser.find_element_by_id('Phone-number').send_keys(num)
+        time.sleep(2)
+        browser.find_element_by_id("send-otp").click()
+        time.sleep(2)
+        print("myupchar send")
+    except:
+        print("myupchar failed")
+
+
+def pizzahut(num):
+    try:
+        browser.get('https://www.pizzahut.co.in/account/otp')
+        time.sleep(4)
+        number = browser.find_element_by_id('phone-field').send_keys(num)
+        time.sleep(2)
+        browser.find_element_by_xpath("//*[@id='app']/div/div[2]/div/form/button").click()
+        time.sleep(2)
+        print("pizzahut send")
+    except:
+        print("pizzahut failed")
+
+def unacademy(num):
+    try:
+        browser.get('https://unacademy.com/')
+        time.sleep(4)
+        browser.find_element_by_xpath("//*[@id='__next']/header/div/button").click()
+        time.sleep(4)
+        browser.find_element_by_xpath('//*[@id="DrawerPaper"]/div[2]/div[1]/div[2]/div/input').send_keys(num)
+        time.sleep(2)
+        browser.find_element_by_xpath('//*[@id="DrawerPaper"]/div[2]/div[1]/div[3]/button').click()
+        time.sleep(2)
+        print("unacademy send")
+    except:
+        print("unacademy failed")
+
+
+def dominos(num):
+    try:
+        browser.get('https://pizzaonline.dominos.co.in/')
+        time.sleep(4)
+        browser.find_element_by_xpath('//*[@id="__next"]/div/div[1]/div[1]/div/div[3]/div[2]/div[1]/div[2]').click()
+        time.sleep(3)
+        browser.find_element_by_xpath('//*[@id="__next"]/div/div[1]/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/div/div/div/div[2]/div/form/div[1]/div[2]/input').send_keys(num)
+        browser.find_element_by_xpath('//*[@id="__next"]/div/div[1]/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/div/div/div/div[2]/div/form/div[2]/input').click()
+        time.sleep(2)
+        print("dominos send")
+    except:
+        print("dominos failed")        
+
 # -------------------------------------------------END FUNCTIONS ----------------------------------------------
 
 
